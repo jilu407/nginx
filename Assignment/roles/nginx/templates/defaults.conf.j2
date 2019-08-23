@@ -1,0 +1,28 @@
+server {
+  listen 8989;
+  listen [::]:8989;
+  server_name 3.83.122.55;
+  root  /usr/share/nginx/html;
+  index index.html;
+
+  location / {
+  }
+}
+server {
+  listen 9090;
+  listen [::]:9090;
+  server_name 3.83.122.55;
+  root  /usr/share/nginx/html;
+  index index.html;
+
+  location / {
+  }
+}
+server {
+  listen 8080;
+  listen [::]:8080;
+  server_name 3.83.122.55;
+
+  location / {
+  }
+}

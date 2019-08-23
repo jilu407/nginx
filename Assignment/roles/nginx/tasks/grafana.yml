@@ -1,0 +1,14 @@
+---
+- name: copy custom yum repo
+  template:
+    src=grafana.repo.j2
+    dest=/etc/yum.repos.d/grafana.repo
+- name: install grafana
+  yum:
+    name: grafana
+    state: latest
+- name: start the grafana
+  service:
+    name: grafana-server
+    state: started
+    enabled: yes
